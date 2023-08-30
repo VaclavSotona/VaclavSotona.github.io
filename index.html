@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>index.html</title>
+    <meta charset="utf-8">
+    <style>
+* {
+    font-family: Arial, sans-serif; 
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    background-color: #e7e7e7;
+  }
+
+body {
+    min-width: 900px;
+    max-width: 960px;
+    min-height: 500px;
+    padding-right: 18px;
+    padding-left: 18px;     
+    background-color: #dfdfdf;
+    box-shadow: 0px 0px 10px #dfdfdf;
+  }
+
+.exec-pairs {
+    display: flex;
+}
+
+.pairs {
+    display: flex;
+    width: auto;
+    align-items: flex-end;
+    margin-right: 13px;
+}
+
+.exec-label {
+    text-align: center;
+    align-items: flex-end;
+    display: flex;
+    margin: 0;
+    font-size: 12px;
+    color: #7c7e81;
+}
+
+.exec-count {
+    font-size: 30px;
+    margin: 0;
+    margin-right: 5px;
+}
+
+.test-cases {
+    margin-top: 50px;
+}
+
+.cases {
+    display: flex;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #c3c6c9;
+}
+
+.cases:last-child {
+    border-bottom: 0px solid black;
+}
+
+.cases-key {
+    margin: 0;
+    font-weight: bold;
+}
+
+.cases-label {
+    margin: 0;
+    margin-left: 12px;
+}
+
+.cases-status {
+    width: 85px;
+    margin: 0;
+    margin-left: auto;
+    text-align: center;
+    padding: 3px 0 3px 0;
+    border-radius: 4px;
+    font-size: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.test-defects {
+    margin-top: 50px;
+}
+
+.defect {
+    display: flex;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #c3c6c9;
+}
+
+.defect:last-child {
+    border-bottom: 0px solid black;
+}
+
+.defect-key {
+    margin: 0;
+    font-weight: bold;
+}
+
+.defect-label {
+    margin: 0;
+    margin-left: 12px;
+}
+
+.defect-status {
+    width: 85px;
+    margin: 0;
+    text-align: center;
+    padding: 3px 0 3px 0;
+    border-radius: 4px;
+    font-size: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.defect-img {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.priority-img {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    margin-top: 2px;
+    margin-right: 15px;
+    margin-left: auto;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  border-radius: 0px;
+  overflow: hidden;
+  margin-top: 15px;
+  display: flex;
+}
+
+.progress {
+  height: 100%;
+  transition: width 0.3s ease-in-out;
+}
+
+a {color: #111111;}
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+.defectDone {color: #00875a; background-color: #e3fcef;}
+.defectRejected {color: #00875a; background-color: #e3fcef;}
+.defectIn {color: #0747a6; background-color: #deebff;}
+.defectFixed {color: #0747a6; background-color: #deebff;}
+        }
+    </style>
+  </head>
+  <body>
+    <h1 class="header">Test Target API level 33, Samsung S21, Android 13</h1>
+    <div class="exec-pairs">
+      <div class="pairs" style="border-bottom: 3px solid #95C160">
+        <p class="exec-count" style="">71</p>
+        <p class="exec-label">PASS</p>
+      </div>
+      <div class="pairs" style="border-bottom: 3px solid #D45D52">
+        <p class="exec-count" style="color: #D45D52">3</p>
+        <p class="exec-label">FAIL</p>
+      </div>
+      <div class="pairs" style="border-bottom: 3px solid #4E84CC">
+        <p class="exec-count" style="">18</p>
+        <p class="exec-label">N/A</p>
+      </div>
+      <div class="pairs" style="border-bottom: 3px solid #753421">
+        <p class="exec-count" style="">4</p>
+        <p class="exec-label">BLOCKED</p>
+      </div>
+    </div>
+    <div class="progress-bar">
+      <div class="progress" style="background-color:#95C160;width:74%;"></div>
+      <div class="progress" style="background-color:#D45D52;width:3.1%;"></div>
+      <div class="progress" style="background-color:#4E84CC;width:18.8%;"></div>
+      <div class="progress" style="background-color:#753421;width:4.1%;"></div>
+    </div>
+    <div class="test-defects">
+      <div class="defect">
+        <div class="defect-img" style="background: url(https://fujira.csin.cz/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype);"></div>
+        <a class="defect-key" href="https://fujira.csin.cz/browse/GE-8082" style="text-decoration: line-through;">GE-8082</a>
+        <p class="defect-label">George klíč, Android, povýšení target api level na 33</p>
+        <div class="priority-img" style="background: url(https://fujira.csin.cz/images/icons/priorities/medium.svg);"></div>
+        <p class="defect-status defectDone">DONE</p>
+      </div>
+      <div class="defect">
+        <div class="defect-img" style="background: url(https://fujira.csin.cz/secure/viewavatar?size=xsmall&amp;avatarId=10303&amp;avatarType=issuetype);"></div>
+        <a class="defect-key" href="https://fujira.csin.cz/browse/DF-67596" style="">DF-67596</a>
+        <p class="defect-label">George Klíč, Android, 11.3.2, Otvorenie klávesnice, Premenovanie</p>
+        <div class="priority-img" style="background: url(https://fujira.csin.cz/images/icons/priorities/trivial.svg);"></div>
+        <p class="defect-status defectFixed">FIXED</p>
+      </div>
+    </div>
+    <div class="test-cases">
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10235">GE-10235</a>
+        <p class="cases-label">TC_RGRS_GK_012 - Nastavení - Správa zařízení - Přejmenování</p>
+        <p class="cases-status" style="background-color:#D45D52">FAIL</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10414">GE-10414</a>
+        <p class="cases-label">TC_RGRS_GK_028 - Bezpečnost - Změna uživatelského jména</p>
+        <p class="cases-status" style="background-color:#D45D52">FAIL</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10460">GE-10460</a>
+        <p class="cases-label">TC_RGRS_GK_094 - Nastavení - Zadání nesprávného PINu při Správě zařízení</p>
+        <p class="cases-status" style="background-color:#D45D52">FAIL</p>
+      </div>
+    </div>
+    <div class="test-cases">
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10130">GE-10130</a>
+        <p class="cases-label">TC_RGRS_GK_030 - Kontakty - Infolinka - Volání ze zahraničí</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10131">GE-10131</a>
+        <p class="cases-label">TC_RGRS_GK_068 - Aktivace - Neplatná kombinace AK-SMS kód</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10133">GE-10133</a>
+        <p class="cases-label">TC_RGRS_GK_085 - Transakce - Úspěšné potvrzení nadlimitní transakce</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10139">GE-10139</a>
+        <p class="cases-label">TC_RGRS_GK_036 - Nastavení - Zapomenutý PIN</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10162">GE-10162</a>
+        <p class="cases-label">TC_RGRS_GK_000 - Aktivace - AK</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10164">GE-10164</a>
+        <p class="cases-label">TC_RGRS_GK_020 - Bezpečnost - Změna limitu</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10175">GE-10175</a>
+        <p class="cases-label">TC_RGRS_GK_079 - Main - Seznam transakcí - Různé expirace transakcí</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10176">GE-10176</a>
+        <p class="cases-label">TC_RGRS_GK_050 - Main - Banner Go Hard</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10177">GE-10177</a>
+        <p class="cases-label">TC_RGRS_GK_052 - Aktivace - Blokace AK</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10182">GE-10182</a>
+        <p class="cases-label">TC_RGRS_GK_035 - Nastavení - Biometrie / Fingerprint</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10184">GE-10184</a>
+        <p class="cases-label">TC_RGRS_GK_070 - Aktivace - Neplatná kombinace AK-SMS kód Posledné zadání</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10187">GE-10187</a>
+        <p class="cases-label">TC_RGRS_GK_002 - Aktivace - SMS kód</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10190">GE-10190</a>
+        <p class="cases-label">TC_RGRS_GK_084 - Transakce - Expirace transakce</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10191">GE-10191</a>
+        <p class="cases-label">TC_RGRS_GK_009 - Transakce - Platby - Online PIN</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10195">GE-10195</a>
+        <p class="cases-label">TC_RGRS_GK_064 - Aktivace - Neplatné zadání AK - Poslední zadání</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10207">GE-10207</a>
+        <p class="cases-label">TC_RGRS_GK_048 - Aktivace - Tlačítko Stáhnout bankovnictví George</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10208">GE-10208</a>
+        <p class="cases-label">TC_RGRS_GK_013 - Nastavení - Správa zařízení - Smazaní</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10213">GE-10213</a>
+        <p class="cases-label">TC_RGRS_GK_071 - Aktivace - AK zablokován po špatném zadání SMS kódu</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10232">GE-10232</a>
+        <p class="cases-label">TC_RGRS_GK_066 - Aktivace - Zobrazení help obrazovky při zadaní AK</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10238">GE-10238</a>
+        <p class="cases-label">TC_RGRS_GK_049 - Main - Banner Go Easy</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10246">GE-10246</a>
+        <p class="cases-label">TC_RGRS_GK_061 - Aktivace - Nesprávná kombinace APIN/nickname</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10250">GE-10250</a>
+        <p class="cases-label">TC_RGRS_GK_078 - Main - Seznam transakcí - Jediná transakce se rovnou zobrazí v detailu</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10257">GE-10257</a>
+        <p class="cases-label">TC_RGRS_GK_034 - Nastavení - Zobrazení notifikací</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10263">GE-10263</a>
+        <p class="cases-label">TC_RGRS_GK_077 - Main - Seznam transakcí - Seřazení transakcí v seznamu</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10264">GE-10264</a>
+        <p class="cases-label">TC_RGRS_GK_010 - Transakce - Platby - Online Fingerprint</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10270">GE-10270</a>
+        <p class="cases-label">TC_RGRS_GK_032 - Kontakty - Naplnění FAQ</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10278">GE-10278</a>
+        <p class="cases-label">TC_RGRS_GK_056 - Aktivace - Zobrazení správné verze v intro_help</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10280">GE-10280</a>
+        <p class="cases-label">TC_RGRS_GK_046 - Aktivace - Video Activity</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10282">GE-10282</a>
+        <p class="cases-label">TC_RGRS_GK_100 - Aktivace - Aktivace pomocí Bluetooth - Potvrzení transakce</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10289">GE-10289</a>
+        <p class="cases-label">TC_RGRS_GK_093 - Transakce - Potvrzení transakce na více zařízeních</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10290">GE-10290</a>
+        <p class="cases-label">TC_RGRS_GK_063 - Aktivace - Neplatné zadání AK</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10300">GE-10300</a>
+        <p class="cases-label">TC_RGRS_GK_042 - Aktivace - GGO - LoginAPI s aktivací</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10319">GE-10319</a>
+        <p class="cases-label">TC_RGRS_GK_065 - Aktivace - Expirovaný AK</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10320">GE-10320</a>
+        <p class="cases-label">TC_RGRS_GK_099 - Aktivace - Aktivace pomocí Bluetooth - Nové zařízení</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10321">GE-10321</a>
+        <p class="cases-label">TC_RGRS_GK_102 - Transakce - Zobrazení Deep Breath</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10331">GE-10331</a>
+        <p class="cases-label">TC_RGRS_GK_017 - Aktivace - Security Intro Check</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10345">GE-10345</a>
+        <p class="cases-label">TC_RGRS_GK_014 - Nastavení - Změna PINu</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10347">GE-10347</a>
+        <p class="cases-label">TC_RGRS_GK_025 - Transakce - Hromadní platba</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10362">GE-10362</a>
+        <p class="cases-label">TC_RGRS_GK_043 - Transakce - GGO - Změna Easy Access metody</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10364">GE-10364</a>
+        <p class="cases-label">TC_RGRS_GK_021 - Transakce - 3Ds Transakce - Online</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10369">GE-10369</a>
+        <p class="cases-label">TC_RGRS_GK_040 - Transakce - GGO - LoginAPI</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10370">GE-10370</a>
+        <p class="cases-label">TC_RGRS_GK_069 - Aktivace - Helpová obrazovka při blokovaném AK</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10406">GE-10406</a>
+        <p class="cases-label">TC_RGRS_GK_058 - Aktivace - Překročení maximálního počtu zařízení</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10410">GE-10410</a>
+        <p class="cases-label">TC_RGRS_GK_103 - Transakce - Funkce časovaču při Deep Breath</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10411">GE-10411</a>
+        <p class="cases-label">TC_RGRS_GK_080 - Main - Prázdný seznam transakcí</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10415">GE-10415</a>
+        <p class="cases-label">TC_RGRS_GK_044 - Main - Změna vzhledu po upgrade verze</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10423">GE-10423</a>
+        <p class="cases-label">TC_RGRS_GK_097 - Transakce - Aktivace GGO na jiné identitě než GK</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10441">GE-10441</a>
+        <p class="cases-label">TC_RGRS_GK_062 - Aktivace - Zobrazení posledního pokusu zadání nickname</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10445">GE-10445</a>
+        <p class="cases-label">TC_RGRS_GK_054 - Aktivace - Aktivace bez připojení</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10453">GE-10453</a>
+        <p class="cases-label">TC_RGRS_GK_038 - Nastavení - Změna vzhledu</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10456">GE-10456</a>
+        <p class="cases-label">TC_RGRS_GK_037 - Nastavení - Policy check</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10463">GE-10463</a>
+        <p class="cases-label">TC_RGRS_GK_029 - Kontakty - Infolinka - Kontaktní centrum</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10474">GE-10474</a>
+        <p class="cases-label">TC_RGRS_GK_011 - Nastavení - Správa zařízení - Zablokování</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10475">GE-10475</a>
+        <p class="cases-label">TC_RGRS_GK_041 - Transakce - GGO - SignAPI</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10483">GE-10483</a>
+        <p class="cases-label">TC_RGRS_GK_033 - Kontakty - Všechny Aplikace</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10484">GE-10484</a>
+        <p class="cases-label">TC_RGRS_GK_026 - Transakce - Zobrazení PINu ke kartě</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10489">GE-10489</a>
+        <p class="cases-label">TC_RGRS_GK_086 - Transakce - Neúspěšné potvrzení nadlimitní transakce</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10491">GE-10491</a>
+        <p class="cases-label">TC_RGRS_GK_096 - Main - Upozornění o registraci nadlimitky na jiném zařízení</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10493">GE-10493</a>
+        <p class="cases-label">TC_RGRS_GK_003 - Transakce - Přihlášení - Online PIN</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10498">GE-10498</a>
+        <p class="cases-label">TC_RGRS_GK_039 - Nastavení - Správa Zařízení - Přihlášení</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10510">GE-10510</a>
+        <p class="cases-label">TC_RGRS_GK_057 - Aktivace - Blokace uživatelského jména</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10514">GE-10514</a>
+        <p class="cases-label">TC_RGRS_GK_045 - Aktivace - Přesmerování do GGO po aktivaci a fingerprintu</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10523">GE-10523</a>
+        <p class="cases-label">TC_RGRS_GK_027 - Transakce - Registrace nadlimitních plateb</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10531">GE-10531</a>
+        <p class="cases-label">TC_RGRS_GK_067 - Aktivace - Funkce Helpové obrazovky při zadání AK</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10533">GE-10533</a>
+        <p class="cases-label">TC_RGRS_GK_104 - Nastavení - Deep Breath switch</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10551">GE-10551</a>
+        <p class="cases-label">TC_RGRS_GK_083 - Transakce - Zamítnutí transakce</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10554">GE-10554</a>
+        <p class="cases-label">TC_RGRS_GK_095 - Aktivace - Automatická registrace Nadlimitních plateb na stejném zařízení</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10557">GE-10557</a>
+        <p class="cases-label">TC_RGRS_GK_016 - Aktivace - Onboarding</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10565">GE-10565</a>
+        <p class="cases-label">TC_RGRS_GK_075 - Aktivace - Vytvoření PINu - Číselná řada</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10572">GE-10572</a>
+        <p class="cases-label">TC_RGRS_GK_076 - Aktivace - Vytvoření PINu - Špatné potvrzení PINu</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10577">GE-10577</a>
+        <p class="cases-label">TC_RGRS_GK_031 - Kontakty - Infolinka - Hovor s Investorem</p>
+        <p class="cases-status" style="background-color:#95C160">PASS</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10169">GE-10169</a>
+        <p class="cases-label">TC_RGRS_GK_018 - Transakce - Nefinanční transakce</p>
+        <p class="cases-status" style="background-color:#4E84CC">N/A</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10201">GE-10201</a>
+        <p class="cases-label">TC_RGRS_GK_089 - Tokenizace - Tokenizace karty na hodinkách</p>
+        <p class="cases-status" style="background-color:#4E84CC">N/A</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10219">GE-10219</a>
+        <p class="cases-label">TC_RGRS_GK_055 - Aktivace - Aktivace rootnutého zařízení</p>
+        <p class="cases-status" style="background-color:#4E84CC">N/A</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10248">GE-10248</a>
+        <p class="cases-label">TC_RGRS_GK_087 - Tokenizace - Tokenizace karty na mobilu</p>
+        <p class="cases-status" style="background-color:#4E84CC">N/A</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10299">GE-10299</a>
+        <p class="cases-label">TC_RGRS_GK_092 - Tokenizace - Tokenizace bez aktivovaného GK</p>
+        <p class="cases-status" style="background-color:#4E84CC">N/A</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10339">GE-10339</a>
+        <p class="cases-label">TC_RGRS_GK_024 - Transakce - Consent</p>
+        <p class="cases-status" style="background-color:#4E84CC">N/A</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10341">GE-10341</a>
+        <p class="cases-label">TC_RGRS_GK_059 - Aktivace - Aktivace na nepodporovaném operačním systému</p>
+        <p class="cases-status" style="background-color:#4E84CC">N/A</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10368">GE-10368</a>
+        <p class="cases-label">TC_RGRS_GK_098 - Main - Záslepka GK</p>
+        <p class="cases-status" style="background-color:#4E84CC">N/A</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10383">GE-10383</a>
+        <p class="cases-label">TC_RGRS_GK_015 - Aktivace - Heslo + SMS</p>
+        <p class="cases-status" style="background-color:#4E84CC">N/A</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10396">GE-10396</a>
+        <p class="cases-label">TC_RGRS_GK_023 - Transakce - Podpis Dokumentu</p>
+        <p class="cases-status" style="background-color:#4E84CC">N/A</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10416">GE-10416</a>
+        <p class="cases-label">TC_RGRS_GK_051 - Aktivace - Aktivace PIN_2SMS bez SIM karty</p>
+        <p class="cases-status" style="background-color:#4E84CC">N/A</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10426">GE-10426</a>
+        <p class="cases-label">TC_RGRS_GK_090 - Tokenizace - Tokenizace zablokované karty</p>
+        <p class="cases-status" style="background-color:#4E84CC">N/A</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10458">GE-10458</a>
+        <p class="cases-label">TC_RGRS_GK_053 - Aktivace - Blokace Hesla v Heslo + SMS</p>
+        <p class="cases-status" style="background-color:#4E84CC">N/A</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10470">GE-10470</a>
+        <p class="cases-label">TC_RGRS_GK_088 - Tokenizace - Tokenizace karty na tabletu</p>
+        <p class="cases-status" style="background-color:#4E84CC">N/A</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10509">GE-10509</a>
+        <p class="cases-label">TC_RGRS_GK_091 - Tokenizace - Tokenizace jednorázové karty</p>
+        <p class="cases-status" style="background-color:#4E84CC">N/A</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10530">GE-10530</a>
+        <p class="cases-label">TC_RGRS_GK_060 - Aktivace - Aktivace na nepodporované verzi aplikace</p>
+        <p class="cases-status" style="background-color:#4E84CC">N/A</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10537">GE-10537</a>
+        <p class="cases-label">TC_RGRS_GK_073 - Aktivace - Heslo+SMS bez SIM karty</p>
+        <p class="cases-status" style="background-color:#4E84CC">N/A</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10548">GE-10548</a>
+        <p class="cases-label">TC_RGRS_GK_074 - Aktivace - Nesprávné zadání PINu v PIN_2SMS</p>
+        <p class="cases-status" style="background-color:#4E84CC">N/A</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10235">GE-10235</a>
+        <p class="cases-label">TC_RGRS_GK_012 - Nastavení - Správa zařízení - Přejmenování</p>
+        <p class="cases-status" style="background-color:#D45D52">FAIL</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10414">GE-10414</a>
+        <p class="cases-label">TC_RGRS_GK_028 - Bezpečnost - Změna uživatelského jména</p>
+        <p class="cases-status" style="background-color:#D45D52">FAIL</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10460">GE-10460</a>
+        <p class="cases-label">TC_RGRS_GK_094 - Nastavení - Zadání nesprávného PINu při Správě zařízení</p>
+        <p class="cases-status" style="background-color:#D45D52">FAIL</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10129">GE-10129</a>
+        <p class="cases-label">TC_RGRS_GK_082 - Main - Push notifikace přijde na všechny aktivní zařízení</p>
+        <p class="cases-status" style="background-color:#753421">BLOCKED</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10260">GE-10260</a>
+        <p class="cases-label">TC_RGRS_GK_072 - Aktivace - Nedoručená SMS od klienta</p>
+        <p class="cases-status" style="background-color:#753421">BLOCKED</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10305">GE-10305</a>
+        <p class="cases-label">TC_RGRS_GK_081 - Main - Push notifikace otveře detail transakce</p>
+        <p class="cases-status" style="background-color:#753421">BLOCKED</p>
+      </div>
+      <div class="cases">
+        <a class="cases-key" href="https://fujira.csin.cz/browse/GE-10337">GE-10337</a>
+        <p class="cases-label">TC_RGRS_GK_047 - Aktivace - Nadiktování SMS</p>
+        <p class="cases-status" style="background-color:#753421">BLOCKED</p>
+      </div>
+    </div>
+  </body>
+</html>
